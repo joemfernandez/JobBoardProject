@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Local Dev - Job Board</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../src/job-board.css">
+</head>
+
+<body style="background-color: #f4f4f4; padding: 20px;">
+
+    <div style="max-width: 1200px; margin: auto; background: white; padding: 30px; border: 1px solid #ddd;">
+        <h1>Job Board - Local Workbench</h1>
+        <hr>
+
+        <div id="job-board-container">
+            <div id="job-loading">Loading local mock data...</div>
+            <table id="job-table" class="display" style="width:100%; display:none;">
+                <thead>
+                    <tr>
+                        <th>Notice Number</th>
+                        <th>Announcement Date</th>
+                        <th>Location</th>
+                        <th>Grade</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div id="job-modal-overlay" class="job-modal-hidden">
+                <div class="job-modal-content">
+                    <div class="job-modal-header">
+                        <h3 id="job-modal-title">Job Title</h3>
+                        <span id="job-modal-close">&times;</span>
+                    </div>
+                    <div id="job-modal-body" class="job-modal-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/job-board.js"></script>
+    <script>
+        $(document).ready(function () {
+            JobBoardApp.init({
+                dataUrl: "data/job-data.json",
+                tableSelector: "#job-table",
+                loadingSelector: "#job-loading",
+                modalSelector: "#job-modal-overlay"
+            });
+        });
+    </script>
+</body>
+
+</html>
