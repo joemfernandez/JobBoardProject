@@ -25,7 +25,7 @@ QUnit.module('Integration Tests (Async)', function (hooks) {
 
         // 1. Init App
         JobBoardApp.init({
-            dataUrl: "../data/job-data.json",
+            dataUrl: "../dev/data/job-data.json",
             tableSelector: "#test-table",
             loadingSelector: "#test-loading",
             modalSelector: "#test-modal"
