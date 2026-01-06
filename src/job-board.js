@@ -83,6 +83,11 @@ var JobBoardApp = (function ($) {
     },
 
     initTable: function (config, data) {
+      if (!data || data.length === 0) {
+        $(config.loadingSelector).text("No current job openings found.");
+        return;
+      }
+
       var table = $(config.tableSelector).DataTable({
         lengthMenu: [
           [5, 10, 25, 50, -1],
