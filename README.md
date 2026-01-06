@@ -6,11 +6,6 @@ A maintainable, testable, and mobile-friendly jQuery widget for SharePoint 2016.
 
 Perform these steps in your code editor before moving files to SharePoint.
 
-- [ ] **CSS Updates**:
-
-  - [ ] Open `src/job-board.css`.
-  - [ ] Ensure `.job-modal-body` includes `-webkit-overflow-scrolling: touch;` for mobile compatibility.
-
 - [ ] **Path Configuration**:
   - [ ] Open `src/sp-widget.html`.
   - [ ] Update **Line 9**: Set `href` to the absolute path of `job-board.css` in your Style Library.
