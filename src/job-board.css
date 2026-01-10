@@ -69,16 +69,23 @@
 }
 
 /* --- Close Button --- */
+/* Update for Issue #1: Styling the Close Button */
 #job-modal-close {
-    color: #888;
+    background: transparent;
+    border: none;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
+    color: #888;
+    padding: 0;
+    margin: 0;
 }
 
-#job-modal-close:hover {
+#job-modal-close:hover,
+#job-modal-close:focus {
     color: #000;
+    outline: 2px solid #0072C6; /* Visible focus indicator for A11y */
 }
 
 /* --- Modal Body (Scrollable Area) --- */
